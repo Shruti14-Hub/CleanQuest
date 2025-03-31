@@ -1,0 +1,32 @@
+[
+    {
+        "image": "place1.jpg",
+        "title": "Bus Stand",
+        "description": "Garbage piles near waiting areas, emitting a foul smell.",
+        "link": "clean_waste.html"
+    },
+    {
+        "image": "place2.jpg",
+        "title": "Market Area",
+        "description": "Rotting vegetable waste and overflowing dustbins attracting flies.",
+        "link": "clean_waste.html"
+    },
+    {
+        "image": "place3.jpg",
+        "title": "Hospital Entrance",
+        "description": "Discarded medical waste and pan-stained walls.",
+        "link": "clean_waste.html"
+    },
+    {
+        "image": "place4.jpg",
+        "title": "Slum Area",
+        "description": "Open sewage lines and scattered household waste.",
+        "link": "clean_waste.html"
+    },
+    {
+        "image": "place5.jpg",
+        "title": "School Playground",
+        "description": "Broken glass pieces and plastic waste near play equipment.",
+        "link": "clean_waste.html"
+    }
+]

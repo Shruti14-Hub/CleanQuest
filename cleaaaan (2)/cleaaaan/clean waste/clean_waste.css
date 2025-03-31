@@ -1,0 +1,210 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+/* Container Styling */
+.clean-waste-container {
+    text-align: center;
+    padding: 40px;
+    width: 90%;
+    max-width: 1200px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 32px;
+    color: #4CAF50;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+header p {
+    font-size: 18px;
+    color: black;
+    margin-bottom: 25px;
+}
+
+/* Form Container */
+.form-container {
+    background: #1f3d1f;
+    padding: 40px;
+    border-radius: 15px;
+    width: 100%;
+    text-align: left;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+.form-section {
+    background: #345e34;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.form-section h2 {
+    margin-bottom: 15px;
+    color: #d4edda;
+    font-size: 20px;
+}
+
+label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #d4edda;
+    display: block;
+    margin-top: 12px;
+}
+
+input[type="text"],
+input[type="url"],
+textarea,
+input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #a3c293;
+    border-radius: 10px;
+    font-size: 16px;
+    margin-top: 6px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+button,
+.submit-btn {
+    padding: 14px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 25px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover,
+.submit-btn:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+/* Comparison Section */
+.comparison-container {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.comparison-container h2 {
+    font-size: 22px;
+    color: #4CAF50;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#compareForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#compareForm label {
+    font-size: 14px;
+    color: #555;
+}
+
+#compareForm input[type="url"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.compare-btn {
+    align-self: center;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.compare-btn:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* Result Section */
+#result {
+    margin-top: 20px;
+    padding: 15px;
+    background: #e8f5e9;
+    border: 1px solid #4CAF50;
+    border-radius: 5px;
+    text-align: center;
+    display: none; /* Initially hidden */
+}
+
+#result h2 {
+    font-size: 20px;
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+#comparisonResult {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .form-container {
+        width: 100%;
+        padding: 30px;
+    }
+
+    .comparison-container {
+        padding: 15px;
+    }
+
+    button,
+    .submit-btn {
+        font-size: 16px;
+    }
+}

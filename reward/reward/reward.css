@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .logo {
+    border-radius: 50%;
+  }
+  
+  .navbar {
+    height: 80px;
+  }
+  
+  h1, #score {
+    color: #28a745;
+  }
+  
+  .redeem-btn {
+    display: none;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: #ffc107;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .redeem-btn:hover {
+    background-color: #e0a800;
+  }

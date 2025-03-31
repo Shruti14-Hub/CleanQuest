@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clean Waste & Compare</title>
+    <link rel="stylesheet" href="clean_waste.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <div class="clean-waste-container">
+        <header>
+            <h1>Clean & Click</h1>
+            <p>Register your cleanup efforts by submitting before and after images.</p>
+        </header>
+
+        <!-- Image Comparison Section -->
+        <div class="comparison-container">
+            <h2>Compare Images</h2>
+            <form id="compareForm">
+                <label for="imageBefore">Image URL (Before):</label>
+                <input type="url" id="imageBefore" placeholder="Enter the URL of the 'before' image" required>
+
+                <label for="imageAfter">Image URL (After):</label>
+                <input type="url" id="imageAfter" placeholder="Enter the URL of the 'after' image" required>
+
+                <button type="button" id="compareButton">Compare</button>
+            </form>
+
+            <!-- Result Section -->
+            <div id="result" style="margin-top: 20px;">
+                <h2>Comparison Result</h2>
+                <p id="comparisonResult"></p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 CLEAN QUEST. All rights reserved.</p>
+    </footer>
+    <script src="clean_waste.js"></script> <!-- Link to your JavaScript file -->
+</body>
+</html>

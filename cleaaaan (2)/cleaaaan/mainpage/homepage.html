@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Clean Quest</title>
+    <link rel="stylesheet" href="homepage.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-success" style="height: 80px;">
+        <div class="container-fluid">
+            <img src="clean quest.jpg" alt="clean quest" class="logo" width="80" height="80"
+                style="border-radius: 50%;">
+            <a class="navbar-brand m-4" href="#">Clean Quest</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="homepage.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="..\adminportal\adminportal.html">Admin Portal</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Clean & Upload
+                        </a>
+                        
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="report.html">Report</a></li>
+                            <li><a class="dropdown-item" href="clean_waste.html">Upload Before & After Images</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                
+            </div>
+        </div>
+        <a href="#" id="profileLogo">
+            <i class="fa-solid fa-user m-4" style="text-align: right;"></i>
+        </a>
+        <!-- Profile Modal -->
+        <div id="profileModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" id="closeModal">&times;</span>
+                <div class="profile-header">
+                    <img src="../profile/profile-picture.jpg" alt="Profile Picture" class="profile-picture">
+                    <h2 id="username">John Doe</h2>
+                </div>
+                <div class="profile-details">
+                    <p><strong>Email:</strong> johndoe@example.com</p>
+                    <p><strong>Joined:</strong> January 1, 2025</p>
+                    <p><strong>Points Earned:</strong> 1200</p>
+                </div>
+                <div class="profile-actions">
+                    <button onclick="editProfile()">Edit Profile</button>
+                    <button onclick="logout()">Logout</button>
+                </div>
+            </div>
+        </div>
+        
+    </nav>
+    <main>
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active c-item">
+                    <img src="photo1.jpeg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block top-50 start-50 translate-middle">
+                        <h2 class="display-4 fw-bolder">Clean, Click, Claim</h2>
+                        <p class="fs-3">Welcome to Clean Quest – Gamify Cleanup, Earn Rewards, and Make a Difference!</p>
+                    </div>
+                </div>
+                <div class="carousel-item c-item">
+                    <img src="photo2.jpeg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item c-item">
+                    <img src="photo3.jpeg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>    
+        </div>
+        <div class="container mt-3 bg-success">
+            <section class="features">
+                <h1>How It Works</h1>
+                <div class="feature-cards">
+                    <div class="card">
+
+                        <i class="fa-solid fa-camera fa-3x text-success"></i>
+                        <h3>Upload Photos</h3>
+                        <p>Take a photo of garbage and upload it with the location.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fa-solid fa-users fa-3x text-success"></i>
+                        <h3>Form Groups</h3>
+                        <p>Work individually or form groups to clean the area.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fa-solid fa-gift fa-3x text-success"></i>
+                        <h3>Earn Rewards</h3>
+                        <p>Complete tasks and earn points to redeem rewards.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="admin-container mt-3 bg-success">
+            <div class="places">
+            <h1 style="text-align: center;" class="fw-bolder">Search Places</h1>
+            <div class="d-flex justify-content-center">
+                <input type="text" class="form-control" placeholder="Search Places" aria-label="Search Places">
+                <button class="btn btn-success ms-2" type="button">Search</button>
+            </div>
+            </div>
+            <div class="card-container">
+                <div class="card card2" style="width: 18rem;">
+                    <img src="place1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Bus Stand</h5>
+                        <p class="card-text">Garbage piles near waiting areas, emitting a foul smell.</p>
+                        <input type="file" class="form-control" accept="image/*">
+                    </div>
+                </div>
+                <div class="card card2" style="width: 18rem;">
+                    <img src="place1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Temple Premises</h5>
+                        <p class="card-text">Leftover food and plastic plates after religious gatherings.</p>
+                        <input type="file" class="form-control" accept="image/*">
+                    </div>
+                </div>
+                <div class="card card2" style="width: 18rem;">
+                    <img src="place1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Public Park</h5>
+                        <p class="card-text">Plastic wrappers and empty bottles littered across benches and grass.</p>
+                        <input type="file" class="form-control" accept="image/*">
+                    </div>
+                </div>
+                <div class="card card2" style="width: 18rem;">
+                    <img src="place1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Railway Station</h5>
+                        <p class="card-text">Spilled food, cigarette butts, and clogged drains creating an unhygienic environment.</p>
+                        <input type="file" class="form-control" accept="image/*">
+                    </div>
+                </div>
+            </div>
+            <div class="card-container additional-cards d-none">
+                <div class="card card2" style="width: 18rem;">
+                    <img src="place1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Market Area</h5>
+                        <p class="card-text">Rotting vegetable waste and overflowing dustbins attracting flies.</p>
+                        <input type="file" class="form-control" accept="image/*">
+                    </div>
+                </div>
+                <div class="card card2" style="width: 18rem;">
+                    <img src="place1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Hospital Entrance</h5>
+                        <p class="card-text">Discarded medical waste and pan-stained walls.</p>
+                        <input type="file" class="form-control" accept="image/*">
+                    </div>
+                </div>
+                <div class="card card2" style="width: 18rem;">
+                    <img src="place1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Slum Area</h5>
+                        <p class="card-text">Open sewage lines and scattered household waste.</p>
+                        <input type="file" class="form-control" accept="image/*">
+                    </div>
+                </div>
+                <div class="card card2" style="width: 18rem;">
+                    <img src="place1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">School Playground</h5>
+                        <p class="card-text">Broken glass pieces and plastic waste near play equipment.</p>
+                        <input type="file" class="form-control" accept="image/*">
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center mt-3">
+                <button class="btn btn-primary" id="showMoreBtn">Show More</button>
+            </div>
+            <script>
+                document.getElementById('showMoreBtn').addEventListener('click', function () {
+                    const additionalCards = document.querySelector('.additional-cards');
+                    additionalCards.classList.toggle('d-none');
+                    this.textContent = additionalCards.classList.contains('d-none') ? 'Show More' : 'Show Less';
+                });
+            </script>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 CLEAN QUEST. All rights reserved.</p>
+    </footer>
+    <script src="homepage.js"></script>
+    <script>
+        // Open the modal
+        document.getElementById("profileLogo").addEventListener("click", function (event) {
+            event.preventDefault();
+            document.getElementById("profileModal").style.display = "block";
+        });
+    
+        // Close the modal
+        document.getElementById("closeModal").addEventListener("click", function () {
+            document.getElementById("profileModal").style.display = "none";
+        });
+    
+        // Close the modal when clicking outside of it
+        window.addEventListener("click", function (event) {
+            const modal = document.getElementById("profileModal");
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+    
+        function editProfile() {
+            alert("Edit Profile functionality coming soon!");
+        }
+    
+        function logout() {
+            alert("You have been logged out.");
+            window.location.href = "../login/login.html"; // Redirect to login page
+        }
+    </script>
+</body>
+
+</html>

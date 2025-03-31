@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Modal</title>
+    <link rel="stylesheet" href="profile.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <header>
+        <a href="#" id="profileLogo">
+            <img src="profile-logo.png" alt="Profile Logo" class="profile-logo">
+        </a>
+    </header>
+
+    <!-- Profile Modal -->
+    <div id="profileModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeModal">&times;</span>
+            <div class="profile-header">
+                <img src="profile-picture.jpg" alt="Profile Picture" class="profile-picture">
+                <h2 id="username">John Doe</h2>
+            </div>
+            <div class="profile-details">
+                <p><strong>Email:</strong> johndoe@example.com</p>
+                <p><strong>Joined:</strong> January 1, 2025</p>
+                <p><strong>Points Earned:</strong> 1200</p>
+            </div>
+            <div class="profile-actions">
+                <button onclick="editProfile()">Edit Profile</button>
+                <button onclick="logout()">Logout</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 CLEAN QUEST. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Open the modal
+        document.getElementById("profileLogo").addEventListener("click", function (event) {
+            event.preventDefault();
+            document.getElementById("profileModal").style.display = "block";
+        });
+
+        // Close the modal
+        document.getElementById("closeModal").addEventListener("click", function () {
+            document.getElementById("profileModal").style.display = "none";
+        });
+
+        // Close the modal when clicking outside of it
+        window.addEventListener("click", function (event) {
+            const modal = document.getElementById("profileModal");
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+
+        function editProfile() {
+            alert("Edit Profile functionality coming soon!");
+        }
+
+        function logout() {
+            alert("You have been logged out.");
+            window.location.href = "../login/login.html"; // Redirect to login page
+        }
+    </script>
+</body>
+</html>
